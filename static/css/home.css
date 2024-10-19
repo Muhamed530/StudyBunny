@@ -89,6 +89,7 @@
 
 .cta-btn {
     padding: 15px 30px;
+    font-size: medium;
     background-color: #5c9e6d;
     color: white;
     border: none;
@@ -121,6 +122,12 @@
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    font-size: small;
+}
+.hero-content p1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-size: large;
 }
 
 .hero-content img {
