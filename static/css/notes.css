@@ -1,18 +1,12 @@
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Layout */
+/* Container layout: Flexbox for sidebar and content */
 .container {
     display: flex;
-    height: 100vh;
+    flex-direction: row;
+    height: 100vh; /* Full-screen height */
+    overflow: hidden;
 }
 
-/* Sidebar */
+/* Sidebar Styling */
 .sidebar {
     width: 20%;
     background-color: #333;
@@ -21,6 +15,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    height: 100vh; /* Full height */
+    overflow-y: auto; /* Scroll within the sidebar if necessary */
 }
 
 .sidebar-menu {
@@ -43,7 +39,10 @@
 /* Main Content */
 .main-content {
     width: 80%;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    overflow-y: auto; /* Allow scrolling in the main content */
 }
 
 .notes-header {
@@ -51,6 +50,12 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    position: sticky; /* Make the header stay at the top on scroll */
+    top: 0;
+    z-index: 10; /* Ensure it stays above other content */
 }
 
 .share-btn, .minimize-btn {
@@ -68,14 +73,12 @@
     margin-bottom: 20px;
 }
 
+/* Upload Form */
 #upload-form {
+    display: none;
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 10px;
-}
-
-.hidden {
-    display: none;
 }
 
 .study-time {

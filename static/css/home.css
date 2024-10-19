@@ -1,12 +1,4 @@
-/* Reset some default styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Navbar styling */
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -39,11 +31,11 @@
     text-decoration: underline;
 }
 
-/* Header Section */
+/* Home Page Header */
 .main-header {
     text-align: center;
     padding: 100px 20px;
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
 }
 
 .main-header h1 {
@@ -59,10 +51,10 @@
 .cta-btn {
     padding: 15px 30px;
     background-color: #5c9e6d;
-    border: none;
     color: white;
-    font-size: 1rem;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .cta-btn:hover {
@@ -90,7 +82,7 @@
 
 .feature-box {
     margin-bottom: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
