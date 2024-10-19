@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chubby Bunny - Notes Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <input type="text" class="search-bar" placeholder="Search Notes...">
+            <ul class="sidebar-menu">
+                <li>Profile 😊</li>
+                <li>Classmates</li>
+                <li id="new-notes-tab">+ New Notes</li>
+                <li>Class A</li>
+                <li>Class B</li>
+                <li>Shared</li>
+                <li>Trash</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="notes-header">
+                <h2>ETSC 1212 Notes</h2>
+                <button class="share-btn">Share</button>
+                <button class="minimize-btn">Minimize</button>
+            </div>
+
+            <div id="notes-display">
+                <p>Select a note to view it, or upload new notes.</p>
+            </div>
+
+            <!-- Upload Form (hidden by default) -->
+            <form id="upload-form" class="hidden">
+                <h3>Upload Notes</h3>
+                <input type="file" id="file-input" accept=".pdf,.jpg,.png,.doc,.docx">
+                <button type="submit">Upload</button>
+            </form>
+
+            <p class="study-time">Estimated Study Time: 30 minutes</p>
+        </main>
+    </div>
+</body>
+</html>

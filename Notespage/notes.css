@@ -1,0 +1,84 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.share-btn, .minimize-btn {
+    padding: 10px;
+    background-color: #5c9e6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#notes-display {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#upload-form {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.study-time {
+    margin-top: 10px;
+    font-style: italic;
+}
