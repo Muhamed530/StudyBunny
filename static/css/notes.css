@@ -66,11 +66,18 @@
     cursor: pointer;
 }
 
+/* Notes Display Styling */
 #notes-display {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hidden class for toggling visibility */
+.hidden {
+    display: none;
 }
 
 /* Upload Form */
@@ -85,3 +92,49 @@
     margin-top: 10px;
     font-style: italic;
 }
+
+/* New Notes Tab Styling */
+#new-notes-tab {
+    padding: 10px 15px;
+    background-color: #5c9e6d;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#new-notes-tab:hover {
+    background-color: #4a7c55;
+}
+
+/* Upload Form Styling */
+#upload-form {
+    display: none; /* Hidden by default */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#upload-form input[type="file"] {
+    display: block;
+    margin: 10px 0;
+}
+
+#upload-form button {
+    background-color: #5c9e6d;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#upload-form button:hover {
+    background-color: #4a7c55;
+}
+
+
