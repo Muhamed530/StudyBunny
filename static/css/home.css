@@ -2,26 +2,29 @@
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     border-radius: 0;
     width: 100%;
-    transition: width 0.6s ease-in-out, padding 0.6s ease-in-out, 
-                border-radius 0.6s ease-in-out, background-color 0.6s ease;
+    transition: all 0.6s ease-in-out;
     z-index: 1000;
 }
 
+/* Shrinked Navbar with Top Margin */
 .navbar.shrink {
-    width: 90%;
-    padding: 10px 30px;
-    background-color: #444;
-    border-radius: 30px;
-    margin: 10px auto;
-    transition: width 0.6s ease-in-out, padding 0.6s ease-in-out, 
-                border-radius 0.6s ease-in-out, background-color 0.6s ease;
+    width: 90%; /* Slightly smaller width */
+    padding: 10px 30px; /* Adjusted padding */
+    background-color: rgba(255, 255, 255, 0.6); /* Slightly more opaque */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.6s ease-in-out;
+    margin-left: auto;
+    margin-right: auto; /* Center the navbar horizontally */
+    transform: translateY(10px);
 }
 
 .navbar .logo {
@@ -42,19 +45,41 @@
     align-items: center;
 }
 
+/* Hover Effect for Links */
+.nav-links a:hover {
+    color: #333;  /* Dark gray for better visibility on hover */
+}
+
 .nav-links li {
     margin-left: 20px;
 }
 
 .nav-links a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 1rem;
     white-space: nowrap;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
     text-decoration: underline;
+}
+
+.signup-btn {
+    background-color: #5c9e6d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Sign Up Button */
+.signup-btn:hover {
+    background-color: #4a7c55;  /* Darker green on hover */
 }
 
 /* Navbar Logo Container */
@@ -65,7 +90,7 @@
 }
 
 .logo-text {
-    color: white;
+    color: #333;
     font-size: 1.5rem;
     white-space: nowrap;  /* Prevent text from breaking into multiple lines */
 }
@@ -160,4 +185,10 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 20px;  /* Add vertical padding to make the page longer */
 }
