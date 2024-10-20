@@ -5,8 +5,8 @@ section {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: url("/static/images/LoginBunny.jpg") no-repeat center center fixed; 
-    background-color: #f9c2dc;
+    background: url("/static/images/LoginBunny.png") no-repeat center center fixed; 
+    background-color: #fff0f5e6 30%, /* Soft pastel pink */;
     background-position: bottom; 
     background-size: cover;
     }
@@ -17,7 +17,7 @@ section {
         width: 400px;
         height: 450px;
         background: transparent;
-        border: 10px solid rgba(0, 0, 0, 0.5);
+        border: 5px solid rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         backdrop-filter: blur(15px);
         display: flex;
@@ -32,7 +32,7 @@ section {
 
     h2 {
         font-size: 2em;
-        color: #fff;
+        color: #2f2f2f;
         text-align: center;
     }
 
@@ -96,61 +96,68 @@ section {
         color: #aaa;
     }
 
+    /* Navbar Styling */
     .navbar {
         position: sticky;
         top: 0;
-        background-color: #333;
+        background-color: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px 50px;
-        border-radius: 0;
         width: 100%;
-        transition: width 0.6s ease-in-out, padding 0.6s ease-in-out, 
-                    border-radius 0.6s ease-in-out, background-color 0.6s ease;
+        transition: all 0.5s ease-in-out;
         z-index: 1000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .logo-container {
-        display: flex;
-        align-items: center;  /* Align logo and text vertically */
-        gap: 10px;  /* Space between image and text */
-    }
-    
-    .logo-text {
-        color: white;
-        font-size: 1.5rem;
-        white-space: nowrap;  /* Prevent text from breaking into multiple lines */
-    }
-
+    /* Navbar Shrinked */
     .navbar.shrink {
         width: 90%;
         padding: 10px 30px;
-        background-color: #444;
         border-radius: 30px;
-        margin: 10px auto;
-        transition: width 0.6s ease-in-out, padding 0.6s ease-in-out, 
-                    border-radius 0.6s ease-in-out, background-color 0.6s ease;
+        margin: 10px auto; /* Center horizontally with margin */
+        transform: translateY(10px);
+    }
+
+    /* Logo and Navbar Links */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between logo and text */
+    }
+
+    .logo-text {
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: 800;
+        white-space: nowrap;
     }
 
     .nav-links {
         list-style: none;
         display: flex;
-        flex-wrap: nowrap;  /* Prevent wrapping */
         align-items: center;
+        gap: 20px;
     }
-    
-    .nav-links li {
-        margin-left: 20px;
-    }
-    
+
     .nav-links a {
-        color: white;
+        color: #333;
         text-decoration: none;
         font-size: 1rem;
+        font-weight: 600;
         white-space: nowrap;
+        border-radius: 5px;
+        transition: color 0.3s ease;
     }
-    
+
     .nav-links a:hover {
         text-decoration: underline;
+        font-weight: 700;
     }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
