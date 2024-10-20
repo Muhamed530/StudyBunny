@@ -17,4 +17,13 @@ window.addEventListener('scroll', () => {
             isShrunk = false;  // Update state to non-shrunk
         }
     }, 35);  // Debounce delay (
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const parallaxImage = document.querySelector('.parallax-wrapper img');
+    
+        // Adjust the translateY value based on scroll
+        parallaxImage.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+    });
+
 });
