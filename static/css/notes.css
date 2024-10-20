@@ -172,6 +172,35 @@ body {
     padding: 10px; /* Add padding for better text input */
 }
 
+/* Textarea and Button Styling for Size */
+#survey-input {
+    width: 100%; /* Full width */
+    height: 60%; /* Increased height for larger text area */
+    margin-bottom: 10px; /* Space below the textarea */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for better text input */
+    margin-left: -15%;
+}
+#survey-form h3 {
+    color: #333; /* Dark text for the title */
+    margin-bottom: 15px; /* Space below the title */
+    margin-left: -13%;
+
+}
+
+#survey-form button {
+    padding: 10px 10px; /* Increase button size */
+    font-size: 15px; /* Larger font size */
+    background-color: rgba(137, 207, 240, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 80%;
+}
+
 #upload-form button {
     padding: 10px 20px; /* Increase button size */
     font-size: 20px; /* Larger font size */
@@ -195,12 +224,13 @@ body {
 /* Example Notes Section Styling */
 #example-notes {
     background-color: #ffffff; /* White background for contrast */
-    padding: 400px 20px 20px 20px; /* Increase padding at the top to move text lower */
+    padding: 70% 20px 20px 20px; /* Increase padding at the top to move text lower */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     width: 80%; /* Full width relative to main content */
     max-width: 600px; /* Limit the maximum width */
-    margin: 20px auto; /* Center horizontally with margin */
+    margin: 20px; /* Center horizontally with margin */
+    margin-top: -15px;
 
 }
 

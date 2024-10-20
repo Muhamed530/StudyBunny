@@ -17,9 +17,13 @@
 <body>
     <!-- User Navbar -->
     <nav class="user-navbar">
+        <div class ="logo-container">
+            <img src="/static/images/carrot.png" alt = "StudyBunny Logo" width="60" height="60">
+        </div>
         <div class="nav-left">
             <a href="#">studybunny</a>
         </div>
+        
         <div class="nav-right profile-icon">
             <!-- Inline SVG for the Profile Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon" width="40" height="40">
@@ -144,6 +148,13 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Survey Form -->
+            <form id="survey-form" class="hidden">
+                <h3>Help studybunny improve your study methods</h3>
+                <textarea id="survey-input" placeholder="Tell us which methods worked for you or which ones didn't work! So we can improve our notes and methods for you." rows="4"></textarea>
+                <button type="submit">Submit</button>
+            </form>
 
 
 

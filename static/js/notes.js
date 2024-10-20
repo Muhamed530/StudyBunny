@@ -8,9 +8,11 @@ const sidebarToggle = document.getElementById('sidebar-toggle');
 const sidebar = document.getElementById('sidebar');
 const exampleNotes = document.getElementById('example-notes');
 const studyMethodsSection = document.getElementById('study-methods');
+const survey = document.getElementById('survey-form');
 
 // Initially hide the upload form
 uploadForm.classList.add('hidden');
+survey.classList.add('hidden')
 
 notesDisplay.classList.toggle('hidden');
 
@@ -49,10 +51,12 @@ document.getElementById('class-a-btn').addEventListener('click', () => {
     // Hide the notes display and upload form
     notesDisplay.classList.add('hidden');
     uploadForm.classList.add('hidden');
+    survey.classList.add('hidden');
     
     // Show the example notes
     exampleNotes.classList.remove('hidden');
     studyMethodsSection.classList.remove('hidden');
+    survey.classList.remove('hidden');
 
     // Optionally, hide the buttons
     addClassBtn.classList.add('hidden');
