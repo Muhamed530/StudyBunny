@@ -1,162 +1,161 @@
-/* Container layout: Flexbox for sidebar and content */
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* User Navbar with Gradient */
+.user-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically align content */
+    padding: 10px 20px;
+    height: 60px;
+
+    /* Apply Gradient from Hero */
+    background: linear-gradient(
+        135deg,
+        rgba(240, 230, 255, 0.9) 0%,
+        rgba(255, 225, 210, 0.8) 35%,
+        rgba(255, 240, 245, 0.8) 70%,
+        rgba(240, 248, 255, 1) 100%
+    );
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+/* Navbar Links */
+.user-navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.profile-icon .icon {
+    width: 40px;
+    height: 40px;
+    fill: #4a7c55; /* Initial color */
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.profile-icon .icon:hover {
+    fill: #5c9e6d; /* Change color on hover */
+}
+
+/* Container Layout */
 .container {
     display: flex;
-    flex-direction: row;
-    height: 100vh; /* Full-screen height */
-    overflow: hidden;
+    height: calc(100vh - 60px); /* Full height minus navbar */
 }
 
 /* Sidebar Styling */
 .sidebar {
-    width: 20%;
-    background-color: #333;
+    width: 20%; /* Full sidebar width */
+    background-color: #444;
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    height: 100vh; /* Full height */
-    overflow-y: auto; /* Scroll within the sidebar if necessary */
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.4s ease; /* Smooth transition */
+    position: relative;
 }
 
-.sidebar-menu {
-    list-style: none;
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 40px; /* Even smaller collapsed width */
+    overflow: hidden; /* Hide internal content */
 }
 
+/* Hide Sidebar Menu Items on Collapse */
 .sidebar-menu li {
-    cursor: pointer;
-    padding: 10px 0;
-    border-bottom: 1px solid white;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.search-bar {
-    margin-bottom: 20px;
-    padding: 10px;
+.sidebar.collapsed .sidebar-menu li {
+    opacity: 0; /* Fully hide items */
+    pointer-events: none; /* Disable interaction */
+}
+
+/* Toggle Button Styling */
+.toggle-btn {
+    align-self: flex-end;
+    background-color: #555;
     border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #666;
+}
+
+
+/* Sidebar Tab Styling */
+.tab {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: #5c9e6d;
 }
 
 /* Main Content */
 .main-content {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1;
     padding: 20px;
-    overflow-y: auto; /* Allow scrolling in the main content */
-}
-
-.notes-section {
-    background-color: #f0f0f0; /* Gray background */
-    padding: 20px; /* Add some padding */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 20px; /* Space between sections */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-}
-
-.notes-header {
+    overflow-y: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    position: sticky; /* Make the header stay at the top on scroll */
-    top: 0;
-    z-index: 10; /* Ensure it stays above other content */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    flex-direction: column;
 }
 
-.share-btn, .minimize-btn {
-    padding: 10px;
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 50vh; /* Center the buttons vertically */
+}
+
+.home-btn {
+    padding: 20px 40px;
+    font-size: 20px;
     background-color: #5c9e6d;
     color: white;
     border: none;
-    cursor: pointer;
-}
-
-/* Notes Display Styling */
-#notes-display {
-    background-color: #ffffff;
-    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#study-methods {
-    background-color: #f4f4f4; /* Light gray background */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px; /* Space between notes and study methods */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
-}
-
-/* Hidden class for toggling visibility */
-.hidden {
-    display: none;
-}
-
-
-.study-time {
-    margin-top: 10px;
-    font-style: italic;
-}
-
-/* New Notes Tab Styling */
-#new-notes-tab {
-    padding: 10px 15px;
-    background-color: #5c9e6d;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-
-#new-notes-tab:hover {
+.home-btn:hover {
     background-color: #4a7c55;
 }
 
-
-#upload-form input[type="file"] {
-    display: block;
-    margin: 10px 0;
-}
-
+/* Upload Form Styling */
 #upload-form {
-    background-color: #f4f4f4; /* Light background for visibility */
+    background-color: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Space from above elements */
 }
-
-#upload-form button {
-    background-color: #5c9e6d; /* Button color */
-    border: none;
-    padding: 10px 20px; /* Button padding */
-    color: white; /* Button text color */
-    cursor: pointer;
-    border-radius: 5px; /* Rounded button */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-#upload-form button:hover {
-    background-color: #4a7c55; /* Darker color on hover */
-}
-
-#text-input {
-    width: 100%;          /* Full width of the container */
-    height: 100px;        /* Adjust the height */
-    width: 1000px;
-    padding: 10px;       /* Inner padding for better spacing */
-    font-size: 16px;     /* Adjust font size */
-    border-radius: 5px;  /* Rounded corners */
-    border: 1px solid #ccc; /* Border color */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
-
-
-
