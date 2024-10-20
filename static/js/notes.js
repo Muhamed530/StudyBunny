@@ -10,6 +10,8 @@ const sidebar = document.getElementById('sidebar');
 // Initially hide the upload form
 uploadForm.classList.add('hidden');
 
+notesDisplay.classList.toggle('hidden');
+
 // Handle "New Notes" tab click
 newNotesTab.addEventListener('click', () => {
     notesDisplay.classList.toggle('hidden');
