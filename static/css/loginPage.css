@@ -59,6 +59,10 @@ section {
         align-items: center; /* Center the input and icon vertically */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
     }
+
+    .inputbox input::placeholder {
+        color: transparent; /* Hide the placeholder text */
+    }
     
     .inputbox input {
         width: 100%;
@@ -81,7 +85,7 @@ section {
     }
     
     .inputbox input:focus + label,
-    .inputbox input:valid + label {
+    .inputbox input:not(:placeholder-shown) + label {
         top: -10px;
         color: #000;
         font-size: 0.75rem;
