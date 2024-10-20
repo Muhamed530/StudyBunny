@@ -16,7 +16,7 @@ body {
 /* Buttons (shared styles) */
 button {
     padding: 10px 20px;
-    background-color: #5c9e6d;
+    background-color: rgba(137, 207, 240, 1);
     color: white;
     border: none;
     border-radius: 5px;
