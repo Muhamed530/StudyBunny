@@ -4,17 +4,18 @@ const uploadForm = document.getElementById('upload-form');
 const notesDisplay = document.getElementById('notes-display');
 const addClassBtn = document.getElementById('add-class-btn');
 const addNotesBtn = document.getElementById('add-notes-btn');
-const homeTitle = document.querySelector('.notes-header h2');
 const sidebarToggle = document.getElementById('sidebar-toggle');
 const sidebar = document.getElementById('sidebar');
+
+// Initially hide the upload form
+uploadForm.classList.add('hidden');
 
 // Handle "New Notes" tab click
 newNotesTab.addEventListener('click', () => {
     notesDisplay.classList.toggle('hidden');
-    uploadForm.classList.toggle('hidden');
-    addClassBtn.classList.toggle('hidden');
-    addNotesBtn.classList.toggle('hidden');
-    homeTitle.classList.toggle('hidden');
+    uploadForm.classList.toggle('hidden'); // Show/hide upload form
+    addClassBtn.classList.toggle('hidden'); // Hide add class button when showing upload form
+    addNotesBtn.classList.toggle('hidden'); // Hide add notes button when showing upload form
 
     // Toggle button text
     newNotesTab.textContent = uploadForm.classList.contains('hidden')
