@@ -163,18 +163,26 @@ body {
     padding: 80px 20px;
 }
 
-.preview, .feature-box {
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
+.preview img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates the shadow */
+    border-radius: 10%; /* Optional: Add rounded corners to the image */
 }
 
-.preview {
-    width: 45%;
+.preview h3{
+    margin-left: 25%;
+    font-size: 40px;
 }
 
-.features {
-    width: 45%;
+.features img {
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates the shadow */
+    border-radius: 10%; /* Optional: Add rounded corners to the image */
+    margin-left: 20%;
+}
+
+.features h4{
+    margin-left: 40%;
+    font-size: 40px;
 }
