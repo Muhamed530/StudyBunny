@@ -45,6 +45,14 @@
     overflow-y: auto; /* Allow scrolling in the main content */
 }
 
+.notes-section {
+    background-color: #f0f0f0; /* Gray background */
+    padding: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
 .notes-header {
     display: flex;
     justify-content: space-between;
@@ -75,18 +83,19 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#study-methods {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; /* Space between notes and study methods */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+}
+
 /* Hidden class for toggling visibility */
 .hidden {
     display: none;
 }
 
-/* Upload Form */
-#upload-form {
-    display: none;
-    background-color: #e0e0e0;
-    padding: 20px;
-    border-radius: 10px;
-}
 
 .study-time {
     margin-top: 10px;
@@ -105,36 +114,49 @@
     transition: background-color 0.3s ease;
 }
 
+
 #new-notes-tab:hover {
     background-color: #4a7c55;
 }
 
-/* Upload Form Styling */
-#upload-form {
-    display: none; /* Hidden by default */
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 #upload-form input[type="file"] {
     display: block;
     margin: 10px 0;
 }
 
+#upload-form {
+    background-color: #f4f4f4; /* Light background for visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Space from above elements */
+}
+
 #upload-form button {
-    background-color: #5c9e6d;
+    background-color: #5c9e6d; /* Button color */
     border: none;
-    padding: 10px 20px;
-    color: white;
+    padding: 10px 20px; /* Button padding */
+    color: white; /* Button text color */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 #upload-form button:hover {
-    background-color: #4a7c55;
+    background-color: #4a7c55; /* Darker color on hover */
 }
+
+#text-input {
+    width: 100%;          /* Full width of the container */
+    height: 100px;        /* Adjust the height */
+    width: 1000px;
+    padding: 10px;       /* Inner padding for better spacing */
+    font-size: 16px;     /* Adjust font size */
+    border-radius: 5px;  /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
 
 
