@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chubby Bunny - Notes Page</title>
-    <link rel="stylesheet" href ="/static/css/base.css">
+    <title>StudyBunny - Notes Dashboard</title>
+
+    <!-- CSS Links -->
     <link rel="stylesheet" href="/static/css/notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- JS Links -->
     <script defer src="/static/js/notes.js"></script>
-    
 </head>
+
 <body>
+    <!-- User Navbar -->
+    <nav class="user-navbar">
+        <div class="nav-left">
+            <a href="#">studybunny</a>
+        </div>
+        <div class="nav-right profile-icon">
+            <!-- Inline SVG for the Profile Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon" width="40" height="40">
+                <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+        </div>
+    </nav>
+
     <div class="container">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <input type="text" class="search-bar" placeholder="Search Notes...">
+        <aside class="sidebar" id="sidebar">
+            <button id="sidebar-toggle" class="toggle-btn">←</button>
             <ul class="sidebar-menu">
-                <li id="new-notes-tab">+ New Notes</li>
-                <li id= "class-a-btn"> Class A</li>
-                <li>Class B</li>
-                <li>Shared</li>
-                <li>Trash</li>
+                <li id="new-notes-tab" class="tab">+ New Notes</li>
+                <li id="class-a-btn" class="tab">Class A</li>
+                <li class="tab">Class B</li>
+                <li class="tab">Shared</li>
+                <li class="tab">Trash</li>
             </ul>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="notes-header">
-                <h2>Home</h2>
+            <div class="buttons-container">
+                <button id="add-class-btn" class="home-btn">+ Add Class</button>
+                <button id="add-notes-btn" class="home-btn">+ Add New Notes</button>
             </div>
 
-            <div id="notes-display">
+            <div id="notes-display" class="hidden">
                 <p>Select a note to view it, or upload new notes.</p>
             </div>
 
-            <!-- Upload Form  -->
+            <!-- Upload Form -->
             <form id="upload-form" class="hidden">
                 <h3>Upload Notes</h3>
-                <textarea type="text" id ="text-input" placeholder="Type in your notes!" rows="4"> </textarea>
+                <textarea id="text-input" placeholder="Type in your notes!" rows="4"></textarea>
                 <input type="file" id="file-input" accept=".pdf,.jpg,.png,.doc,.docx">
                 <button type="submit">Upload</button>
             </form>
-
-            <div class = "class-a" class = "hidden">
-            </div>
         </main>
     </div>
 </body>
+
 </html>
