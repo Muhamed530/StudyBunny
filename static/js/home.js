@@ -12,9 +12,9 @@ window.addEventListener('scroll', () => {
         if (scrollPosition > 100 && !isShrunk) {
             navbar.classList.add('shrink');  // Add 'shrink' class
             isShrunk = true;  // Update state to shrunk
-        } else if (scrollPosition <= 85 && isShrunk) {
+        } else if (scrollPosition <= 87 && isShrunk) {
             navbar.classList.remove('shrink');  // Remove 'shrink' class
             isShrunk = false;  // Update state to non-shrunk
         }
-    }, 25);  // Debounce delay (25ms)
+    }, 35);  // Debounce delay (
 });
