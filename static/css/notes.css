@@ -36,7 +36,7 @@ body {
 .profile-icon .icon {
     width: 40px;
     height: 40px;
-    fill: #4a7c55; /* Initial color */
+    fill: rgba(137, 207, 240, 1); /* Initial color */
     cursor: pointer;
     transition: fill 0.3s ease;
 }
@@ -113,7 +113,7 @@ body {
 }
 
 .tab:hover {
-    background-color: #5c9e6d;
+    background-color: rgba(137, 207, 240, 1);
 }
 
 /* Main Content */
@@ -139,7 +139,7 @@ body {
 .home-btn {
     padding: 20px 40px;
     font-size: 20px;
-    background-color: #5c9e6d;
+    background-color: rgba(137, 207, 240, 1);
     color: white;
     border: none;
     border-radius: 10px;
@@ -148,7 +148,7 @@ body {
 }
 
 .home-btn:hover {
-    background-color: #4a7c55;
+    background-color: rgba(137, 207, 240, 1);
 }
 
 /* Upload Form Styling */
@@ -175,7 +175,7 @@ body {
 #upload-form button {
     padding: 10px 20px; /* Increase button size */
     font-size: 20px; /* Larger font size */
-    background-color: #5c9e6d; /* Keep existing styles */
+    background-color: rgba(137, 207, 240, 1);
     color: white;
     border: none;
     border-radius: 5px;
