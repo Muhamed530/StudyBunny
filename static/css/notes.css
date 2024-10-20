@@ -192,3 +192,46 @@ body {
     display: none;
 }
 
+/* Example Notes Section Styling */
+#example-notes {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 400px 20px 20px 20px; /* Increase padding at the top to move text lower */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 80%; /* Full width relative to main content */
+    max-width: 600px; /* Limit the maximum width */
+    margin: 20px auto; /* Center horizontally with margin */
+
+}
+
+/* Title Style */
+#example-notes h3 {
+    text-align: center; /* Center the title */
+    color: #333; /* Dark text for the title */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+/* List Style */
+#example-notes ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+/* Study Methods Section Styling */
+#study-methods {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 80%; /* Full width relative to main content */
+    max-width: 600px; /* Limit the maximum width */
+    margin: 20px auto; /* Center horizontally with margin */
+}
+
+/* Title Style */
+#study-methods h3 {
+    text-align: center; /* Center the title */
+    color: #333; /* Dark text for the title */
+    margin-bottom: 15px; /* Space below the title */
+    font-size: 1.5rem; /* Larger font size for the title */
+}

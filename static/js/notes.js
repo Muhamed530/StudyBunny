@@ -6,6 +6,8 @@ const addClassBtn = document.getElementById('add-class-btn');
 const addNotesBtn = document.getElementById('add-notes-btn');
 const sidebarToggle = document.getElementById('sidebar-toggle');
 const sidebar = document.getElementById('sidebar');
+const exampleNotes = document.getElementById('example-notes');
+const studyMethodsSection = document.getElementById('study-methods');
 
 // Initially hide the upload form
 uploadForm.classList.add('hidden');
@@ -40,4 +42,22 @@ uploadForm.addEventListener('submit', (event) => {
 sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
     sidebarToggle.textContent = sidebar.classList.contains('collapsed') ? '→' : '←';
+});
+
+// Handle "Class A" tab click
+document.getElementById('class-a-btn').addEventListener('click', () => {
+    // Hide the notes display and upload form
+    notesDisplay.classList.add('hidden');
+    uploadForm.classList.add('hidden');
+    
+    // Show the example notes
+    exampleNotes.classList.remove('hidden');
+    studyMethodsSection.classList.remove('hidden');
+
+    // Optionally, hide the buttons
+    addClassBtn.classList.add('hidden');
+    addNotesBtn.classList.add('hidden');
+
+    // Reset the new notes tab text
+    newNotesTab.textContent = '+ New Notes';
 });
