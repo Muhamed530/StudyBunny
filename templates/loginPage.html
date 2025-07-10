@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chubby Bunny - Login Page</title>
+    <title>Chubby Bunny - Study Data Analysis</title>
     <link rel="stylesheet" href ="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/loginPage.css">
     <script defer src="/static/js/loginPage.js"></script>
@@ -21,36 +21,43 @@
             <li><a href="#">Login / Sign Up</a></li>
         </ul>
     </nav>
-</body>
-<section>
-    <div class = "form-box">
-        <div class = "form-value">
-            <form action = "">
-                <h2>Login</h2>
-                <div class = "inputbox">
-                    <ion=icon name = "mail-outline"></ion-icon>
-                    <input type = "email" placeholder=" " required />
-                    <label for = "">Email</label>
-                </div>
-                <div class = "inputbox">
-                    <ion-icon name = "lock-closed-outline"></ion-icon>
-                    <input type = "password" placeholder=" " required />
-                    <label for = "">Password</label>
-                </div>
-                <div class = "forget">
-                    <button><a href = "notes.html">Log in</a></button>
-                    <label><input type = "checkbox" /> Remember me </label>
-                    <label> 
-                        
-                        <br>
-                        <a href="#">Forgot password?</a>
-                    </label>
-                </div>
-                
-                <div class = "register">
-                    <p>Don't have an account? <a href="signupPage.html">Sign Up!</a></p>
-                </div>
-            </form>
+    <section>
+        <div class = "form-box">
+            <div class = "form-value">
+                <h2>Paste Your Study Data (CSV)</h2>
+                <form id="analyze-form">
+                    <textarea id="studydata" name="studydata" rows="8" cols="50" placeholder="Paste your study data here (CSV format)"></textarea>
+                    <br>
+                    <button type="submit">Analyze</button>
+                </form>
+                <div id="recommendation" style="margin-top:20px;"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <script>
+    document.getElementById('analyze-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const studydata = document.getElementById('studydata').value;
+        const recommendationDiv = document.getElementById('recommendation');
+        recommendationDiv.textContent = 'Analyzing...';
+        try {
+            const response = await fetch('/analyze', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ studydata })
+            });
+            const result = await response.json();
+            if (result.recommendation) {
+                recommendationDiv.textContent = result.recommendation;
+            } else if (result.error) {
+                recommendationDiv.textContent = 'Error: ' + result.error;
+            } else {
+                recommendationDiv.textContent = 'Unexpected response.';
+            }
+        } catch (err) {
+            recommendationDiv.textContent = 'Error: ' + err;
+        }
+    });
+    </script>
+</body>
+</html>
